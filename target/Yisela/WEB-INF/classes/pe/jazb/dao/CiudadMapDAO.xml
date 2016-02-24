@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pe.jazb.dao.CiudadMapDAO">
+	<resultMap type="pe.jazb.domain.Ciudad" id="ciudad">
+		<result property="clave" column="clave" />
+		<result property="nombre" column="nombre" />
+		<result property="poblacion" column="poblacion" />
+	</resultMap>
+
+	<select id='listarCiudades' resultMap='ciudad'>
+		SELECT * FROM CIUDAD
+	</select>
+</mapper>
